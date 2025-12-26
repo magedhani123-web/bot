@@ -1,0 +1,11 @@
+sudo apt update && sudo apt install tor* gdebi xvfb screen -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo gdebi google-chrome-stable_current_amd64.deb
+tor --hash-password 123456
+
+sudo nano /etc/tor/torrc
+
+screen -S myscript
+python3 myscript.py
+# اضغط Ctrl+A ثم D للخروج من الشاشة وترك السكربت شغال
+screen -r myscript  # للرجوع للشاشة
